@@ -4,7 +4,7 @@ import 'package:flutter_application_1/profile_page.dart';
 import 'package:flutter_application_1/register_user.dart';
 import 'package:flutter_application_1/window1.dart';
 
-import 'home_page.dart';
+// import 'home_page.dart';
 
 
 

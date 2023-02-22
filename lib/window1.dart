@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 
 
@@ -19,7 +21,7 @@ class _HomeWindowState extends State<HomeWindow> {
         height: 250.0,
         padding: EdgeInsets.all(20.0),
         margin:  EdgeInsets.all(20.0),
-        alignment: Alignment.topLeft,
+        
         
         decoration: BoxDecoration(
           color: Colors.grey.shade800,
@@ -29,20 +31,34 @@ class _HomeWindowState extends State<HomeWindow> {
           
         ),
         
-        child: Container(
-          width: 100,
-          height: 160,
-          padding: EdgeInsets.all(20.0),
-          margin:  EdgeInsets.all(10.0),
-          alignment: Alignment.topCenter,
-          decoration: BoxDecoration(
-            color: Colors.black,
-            image: const DecorationImage(image: AssetImage("images/1.jpg")), //not image
-            borderRadius: BorderRadius.circular(10.0),
-            border: Border.all(color: Colors.black, width: 6.0),
+        child: SizedBox (
+  width: 300,
+  height: 200,
+  child: Column(
+      mainAxisSize: MainAxisSize.min,
+      children:  const <Widget>[
+        ListTile(
+          leading: SizedBox(
+            height: 200.0,
+            width: 100.0,
+            child: Image(image: AssetImage("assets/images/1.jpg")),
           ),
-          child: Container()
-        ), 
+          title: Text(
+            "Название кинотеатра",
+            style: TextStyle(fontSize: 20),
+          ),
+          subtitle: Text('Адрес:'),
+        ),
+        SizedBox(
+            
+            height: 120.0,
+            width: 100.0,
+            child: Image(image: AssetImage("assets/images/1.jpg")),
+          ),
+      ],
+    ),
+  
+)
         
       ),
       
@@ -57,6 +73,23 @@ class _HomeWindowState extends State<HomeWindow> {
       ),
     backgroundColor: Colors.grey.shade900,
     );
-
   }
 }
+
+
+// class HomeWindow extends StatefulWidget {
+//   const HomeWindow({super.key});
+
+//   @override
+//   State<HomeWindow> createState() => _HomeWindowState();
+// }
+
+// class _HomeWindowState extends State<HomeWindow> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return SizedBox(
+
+//     );
+//   }
+// }
+
